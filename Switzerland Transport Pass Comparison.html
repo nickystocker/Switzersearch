@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland Transport Pass Comparison</title>
+  <style>
+    :root {
+      --bg: #f4efe7;
+      --paper: #fffdf8;
+      --ink: #1f2933;
+      --muted: #6b7280;
+      --line: #ddd4c6;
+      --accent: #1f6f78;
+      --accent-soft: #dcefed;
+      --gold: #c48a3a;
+      --shadow: 0 18px 45px rgba(38, 34, 27, 0.08);
+      --radius: 22px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(196,138,58,.14), transparent 32%),
+        radial-gradient(circle at top right, rgba(31,111,120,.12), transparent 28%),
+        linear-gradient(180deg, #f7f2ea 0%, var(--bg) 100%);
+      line-height: 1.55;
+    }
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 32px auto 56px;
+    }
+    .hero {
+      background: linear-gradient(135deg, rgba(31,111,120,.96), rgba(30,64,95,.92));
+      color: white;
+      border-radius: 30px;
+      padding: 40px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(255,255,255,.18), transparent 65%);
+      border-radius: 50%;
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.2rem, 4vw, 3.8rem);
+      line-height: 1;
+      letter-spacing: -.03em;
+    }
+    .subtitle {
+      margin: 0;
+      color: rgba(255,255,255,.85);
+      font-size: 1.02rem;
+      max-width: 70ch;
+    }
+    .grid {
+      display: grid;
+      gap: 22px;
+      margin-top: 24px;
+    }
+    .card {
+      background: var(--paper);
+      border: 1px solid rgba(152, 129, 91, 0.16);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 24px;
+    }
+    .split {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: 1.15fr .85fr;
+    }
+    h2 {
+      margin: 0 0 12px;
+      font-size: 1.45rem;
+    }
+    h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+    }
+    p {
+      margin: 0 0 12px;
+    }
+    p:last-child { margin-bottom: 0; }
+    .pill {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-size: .88rem;
+      font-weight: 700;
+      letter-spacing: .02em;
+      margin-bottom: 12px;
+    }
+    .highlight {
+      background: linear-gradient(180deg, rgba(31,111,120,.07), rgba(31,111,120,.03));
+      border: 1px solid rgba(31,111,120,.12);
+      border-radius: 18px;
+      padding: 18px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    li + li {
+      margin-top: 8px;
+    }
+    .small {
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    .cost-table-wrap {
+      overflow-x: auto;
+      margin-top: 16px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 760px;
+    }
+    th, td {
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+      border-top: 1px solid var(--line);
+    }
+    th {
+      border-top: none;
+      background: rgba(196,138,58,.1);
+      font-size: .9rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: #6f5532;
+    }
+    tr:nth-child(even) td {
+      background: rgba(31,111,120,.03);
+    }
+    .best {
+      font-weight: 700;
+      color: var(--accent);
+    }
+    .footnote {
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+    @media (max-width: 900px) {
+      .split {
+        grid-template-columns: 1fr;
+      }
+      .card {
+        padding: 20px;
+      }
+      .hero {
+        padding: 32px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Swiss Transport Pass Comparison</h1>
+      <p class="subtitle">A clean side-by-side look at the pass options for your current Switzerland itinerary, including the mountain-heavy days in Zermatt, the Bernese Oberland, Lucerne, and Zurich.</p>
+    </section>
+
+    <section class="grid">
+      <article class="card split">
+        <div>
+          <span class="pill">Best Overall Pick</span>
+          <h2>Swiss Half Fare Card</h2>
+          <p>For this itinerary, the <strong>Swiss Half Fare Card</strong> is the best value. Your trip includes several expensive mountain lifts and rail segments, but most of the biggest-ticket mountain rides do <em>not</em> become fully free with the Swiss Travel Pass. In many of the places you are actually going, the Swiss Travel Pass still only gets you a 50% reduction, which means its much higher upfront cost is hard to justify.</p>
+          <p>The Half Fare Card keeps the base cost low and still cuts down the large scenic-transport costs meaningfully. Since your itinerary is not built around constant long-distance train hopping every day, it fits better than an unlimited travel pass.</p>
+        </div>
+        <div class="highlight">
+          <h3>Bottom Line</h3>
+          <p class="best">Buy: Swiss Half Fare Card</p>
+          <p>Skip: Swiss Travel Pass, Swiss Travel Pass Flex, and Berner Oberland Pass for this specific plan.</p>
+          <p class="small">Estimated Swiss-portion total per person with Half Fare: roughly <strong>CHF 490-520+</strong>, depending on exact ticket choices and final mountain add-ons.</p>
+        </div>
+      </article>
+
+      <article class="card split">
+        <div>
+          <h2>Why This Wins</h2>
+          <ul>
+            <li><strong>Zermatt is expensive either way.</strong> Gornergrat and Matterhorn Glacier Paradise are major costs, and the Swiss Travel Pass usually does not make those rides free.</li>
+            <li><strong>Bernese Oberland is no longer a Berner Oberland Pass slam dunk.</strong> Since Oeschinensee is no longer included from 2026, that option loses a lot of its value for your actual route.</li>
+            <li><strong>You are not doing enough plain rail mileage</strong> to make the Swiss Travel Pass outperform Half Fare.</li>
+            <li><strong>Lucerne is too short</strong> for a Lucerne-specific pass to be compelling.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>What This Review Assumes</h2>
+          <ul>
+            <li>Current itinerary structure as of July 24, 2026.</li>
+            <li>Swiss portion only, not the Italy rental-car days.</li>
+            <li>2nd-class travel.</li>
+            <li>Mountain days include the currently planned major lifts and scenic segments.</li>
+            <li>Totals are approximate and meant for planning, not exact checkout totals.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2>Option-by-Option Read</h2>
+        <p><strong>Neither pass:</strong> This gives maximum flexibility, but it is the most expensive once the mountain railways and cable cars stack up.</p>
+        <p><strong>Swiss Half Fare Card:</strong> Best balance of low upfront cost and meaningful savings across your actual itinerary.</p>
+        <p><strong>Swiss Travel Pass:</strong> Great when you are taking lots of standard trains, boats, and museums every day, but weaker here because your biggest costs are mountain transport lines that often are only discounted, not free.</p>
+        <p><strong>Swiss Travel Pass Flex:</strong> Even less attractive here because the expensive scenic and mountain components do not align well enough with a limited set of “activation days.”</p>
+        <p><strong>Berner Oberland Pass + Half Fare:</strong> Could have been more competitive on an older version of the plan, but the Oeschinensee exclusion from 2026 makes it much harder to justify.</p>
+        <p><strong>Lucerne Travel Pass:</strong> Too narrow for this trip unless you were heavily concentrating your sightseeing around Lucerne and nearby mountains only.</p>
+      </article>
+
+      <article class="card">
+        <h2>Cost Comparison Table</h2>
+        <div class="cost-table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Option</th>
+                <th>Approx. Upfront Pass Cost</th>
+                <th>Approx. Swiss Trip Total / Person</th>
+                <th>How It Fits Your Itinerary</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Neither</td>
+                <td>CHF 0</td>
+                <td>CHF 670-730+</td>
+                <td>Simple, but the most expensive once Zermatt and Bernese Oberland mountain transport is added.</td>
+              </tr>
+              <tr>
+                <td class="best">Swiss Half Fare Card</td>
+                <td>About CHF 120</td>
+                <td class="best">CHF 490-520+</td>
+                <td class="best">Best value for your current route and planned mountain days.</td>
+              </tr>
+              <tr>
+                <td>Swiss Travel Pass</td>
+                <td>About CHF 459 for 15 days</td>
+                <td>CHF 715+</td>
+                <td>Too expensive for this plan because several high-cost mountain rides are still only discounted.</td>
+              </tr>
+              <tr>
+                <td>Swiss Travel Pass Flex</td>
+                <td>Higher than Half Fare and still limited-use</td>
+                <td>Usually worse than Half Fare for this plan</td>
+                <td>Not enough concentrated full-value travel days to make it worthwhile.</td>
+              </tr>
+              <tr>
+                <td>Half Fare + Berner Oberland Pass</td>
+                <td>Roughly CHF 120 + CHF 280-320</td>
+                <td>CHF 610-650+</td>
+                <td>Less compelling now that Oeschinensee is not included from 2026.</td>
+              </tr>
+              <tr>
+                <td>Lucerne Travel Pass</td>
+                <td>Varies by duration</td>
+                <td>Not competitive for the full trip</td>
+                <td>Too localized to beat Half Fare across your whole Switzerland segment.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="footnote">These estimates are planning numbers based on your present itinerary and current published pass structures as of July 24, 2026. Exact totals can still shift a bit depending on final train times, class of service, and whether you add or remove any mountain excursions.</p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Switzerland 2026 Packing List</title>
+  <style>
+    :root {
+      --bg: #f2eee6;
+      --paper: #fffdf8;
+      --ink: #22303a;
+      --muted: #65727e;
+      --line: #d9d0c3;
+      --accent: #1f6f78;
+      --accent-soft: #deeeeb;
+      --warm: #c88c3d;
+      --warm-soft: #f7eadb;
+      --shadow: 0 18px 44px rgba(40, 35, 29, 0.08);
+      --radius: 24px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top left, rgba(200, 140, 61, 0.14), transparent 32%),
+        radial-gradient(circle at top right, rgba(31, 111, 120, 0.12), transparent 28%),
+        linear-gradient(180deg, #f8f4ed 0%, var(--bg) 100%);
+      line-height: 1.55;
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 32px));
+      margin: 32px auto 56px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, rgba(31,111,120,.97), rgba(27,72,97,.94));
+      color: #fff;
+      border-radius: 30px;
+      padding: 38px 32px;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -30px;
+      bottom: -70px;
+      width: 240px;
+      height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(255,255,255,.17), transparent 66%);
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(2.2rem, 4vw, 3.9rem);
+      line-height: 1;
+      letter-spacing: -.03em;
+    }
+
+    .subtitle {
+      margin: 0;
+      color: rgba(255,255,255,.84);
+      max-width: 68ch;
+      font-size: 1.04rem;
+    }
+
+    .summary {
+      margin-top: 24px;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+
+    .summary-card,
+    .section {
+      background: var(--paper);
+      border: 1px solid rgba(152, 129, 91, 0.16);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    .summary-card {
+      padding: 18px 18px 16px;
+    }
+
+    .label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: .76rem;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+      color: var(--muted);
+    }
+
+    .summary-card strong {
+      font-size: 1.08rem;
+    }
+
+    .intro {
+      margin-top: 24px;
+      padding: 24px;
+    }
+
+    .intro h2,
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+    }
+
+    .intro p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .sections {
+      display: grid;
+      gap: 22px;
+      margin-top: 24px;
+    }
+
+    .section {
+      padding: 24px;
+    }
+
+    .section p {
+      margin: 0 0 14px;
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .card {
+      background: rgba(31,111,120,.05);
+      border: 1px solid rgba(31,111,120,.12);
+      border-radius: 18px;
+      padding: 16px 16px 14px;
+    }
+
+    .card.warm {
+      background: var(--warm-soft);
+      border-color: rgba(200, 140, 61, 0.22);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.02rem;
+    }
+
+    ul.checklist {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    ul.checklist li {
+      position: relative;
+      padding-left: 28px;
+      margin: 0;
+    }
+
+    ul.checklist li + li {
+      margin-top: 9px;
+    }
+
+    ul.checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.28em;
+      width: 15px;
+      height: 15px;
+      border: 1.5px solid var(--accent);
+      border-radius: 4px;
+      background: #fff;
+    }
+
+    .note {
+      margin-top: 14px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      background: rgba(200,140,61,.10);
+      color: var(--ink);
+      border: 1px solid rgba(200,140,61,.16);
+    }
+
+    .footer {
+      margin-top: 24px;
+      padding: 22px 24px;
+      background: linear-gradient(180deg, rgba(31,111,120,.08), rgba(255,255,255,0));
+    }
+
+    .footer p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .95em;
+      background: rgba(31,111,120,.08);
+      padding: .08em .35em;
+      border-radius: 6px;
+    }
+
+    @media (max-width: 860px) {
+      .page { width: min(100%, calc(100% - 20px)); }
+      .hero, .intro, .section, .summary-card, .footer { padding-left: 18px; padding-right: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <h1>Switzerland &amp; Northern Italy Packing List</h1>
+      <p class="subtitle">A trip-specific packing list for a 27-year-old female traveler balancing mountain days, cute town outfits, scenic train travel, spa time, and a few bigger adventure days including paragliding, Stoos Ridge, and the Mürren via ferrata.</p>
+    </section>
+
+    <section class="summary">
+      <div class="summary-card">
+        <span class="label">Trip Style</span>
+        <strong>Mountains + towns + transit</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Big Conditions</span>
+        <strong>Warm valleys, cool alpine mornings, shifting weather</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Packing Strategy</span>
+        <strong>Layers, repeatable outfits, comfortable shoes</strong>
+      </div>
+      <div class="summary-card">
+        <span class="label">Special Activities</span>
+        <strong>Hikes, cable cars, spa, paragliding, via ferrata</strong>
+      </div>
+    </section>
+
+    <section class="intro section">
+      <h2>How To Pack For This Trip</h2>
+      <p>This itinerary is not a heavy city trip and not a full technical hiking trip either. The sweet spot is a compact wardrobe that works for travel days, nice dinners, mountain villages, photos, and repeated alpine layering. Prioritize comfort, weather flexibility, and easy day-bag access over packing lots of single-use outfits, but still leave room for a few pieces that feel put-together in Sirmione, Lucerne, and Zurich.</p>
+    </section>
+
+    <section class="sections">
+      <section class="section">
+        <h2>Core Travel Essentials</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Documents & Money</h3>
+            <ul class="checklist">
+              <li>Passport</li>
+              <li>Driver's license</li>
+              <li>Credit cards + debit card</li>
+              <li>A small amount of euros and Swiss francs</li>
+              <li>Travel insurance details</li>
+              <li>Flight confirmations</li>
+              <li>Hotel confirmations</li>
+              <li>Train tickets and QR codes saved offline</li>
+              <li>Rental car confirmation and pickup details</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Phones & Digital Access</h3>
+            <ul class="checklist">
+              <li>Phone</li>
+              <li>Charging cable</li>
+              <li>Portable battery pack</li>
+              <li>European plug adapter</li>
+              <li>AirPods / wired headphones</li>
+              <li>SBB app set up and logged in</li>
+              <li>Offline maps downloaded</li>
+              <li>Screenshots of parking passes and reservations</li>
+            </ul>
+          </div>
+          <div class="card warm">
+            <h3>Must-Have Before Leaving</h3>
+            <ul class="checklist">
+              <li>Put all tickets in one shared album / folder</li>
+              <li>Download the Tre Cime parking QR code</li>
+              <li>Save the Lago di Braies parking ticket</li>
+              <li>Save the Visp / Zermatt train details offline</li>
+              <li>Share key reservations between both phones</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Clothing</h2>
+        <p>These quantities assume a laundry-friendly, rewear-oriented plan rather than packing a brand-new outfit for every day.</p>
+        <div class="grid">
+          <div class="card">
+            <h3>Everyday Clothes</h3>
+            <ul class="checklist">
+              <li>7-9 tops total</li>
+              <li>2-3 lightweight sweaters or long sleeves</li>
+              <li>2 casual bottoms for travel / town days</li>
+              <li>1 pair of jeans or easy pants for cooler evenings</li>
+              <li>1-2 nicer dinner outfits</li>
+              <li>1-2 dresses / skirts / elevated outfits if that feels more like you</li>
+              <li>1 easy hotel / lounge outfit</li>
+              <li>Undergarments for 8-10 days</li>
+              <li>Everyday bras</li>
+              <li>1-2 sports bras</li>
+              <li>8-10 pairs of socks</li>
+              <li>Pajamas</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Mountain Layers</h3>
+            <ul class="checklist">
+              <li>Light waterproof shell</li>
+              <li>Midlayer fleece or performance zip-up</li>
+              <li>Packable insulated jacket or warm puffer</li>
+              <li>2-3 moisture-wicking active tops</li>
+              <li>1-2 pairs of hiking leggings / pants / shorts</li>
+              <li>Light gloves if you run cold</li>
+              <li>Buff or light neck gaiter optional</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Warm-Weather / Lake Items</h3>
+            <ul class="checklist">
+              <li>1-2 lighter outfits for Sirmione / Zurich / Lucerne</li>
+              <li>Swimsuit for Aquaria Thermal Spa</li>
+              <li>Cover-up or easy change layer for spa</li>
+              <li>Light cardigan or layer for lakefront dinners</li>
+              <li>Sun hat or baseball cap</li>
+              <li>Sunglasses</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Shoes</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Recommended Shoe Setup</h3>
+            <ul class="checklist">
+              <li>1 primary hiking shoe or trail shoe with good grip</li>
+              <li>1 comfortable walking sneaker for towns and travel days</li>
+              <li>1 sandal / slide / spa shoe</li>
+            </ul>
+            <div class="note">If your hiking shoe is comfortable enough for general wear, you can get away with just one sneaker-style backup plus spa sandals.</div>
+          </div>
+          <div class="card warm">
+            <h3>Do Not Forget</h3>
+            <ul class="checklist">
+              <li>Break in hiking shoes before the trip</li>
+              <li>Bring blister patches / moleskin</li>
+              <li>Pack a few thicker hiking socks</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Adventure-Day Gear</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Hiking Days</h3>
+            <ul class="checklist">
+              <li>Daypack</li>
+              <li>Refillable water bottle</li>
+              <li>Sunscreen</li>
+              <li>Lip balm with SPF</li>
+              <li>Portable snacks</li>
+              <li>Mini first-aid kit</li>
+              <li>Tissues / wipes</li>
+              <li>Light rain layer</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Paragliding</h3>
+            <ul class="checklist">
+              <li>Athletic outfit</li>
+              <li>Sneakers with secure fit</li>
+              <li>Sunglasses</li>
+              <li>Phone with strap or secure pocket</li>
+              <li>Light layer for morning conditions</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Mürren Via Ferrata</h3>
+            <ul class="checklist">
+              <li>Active outfit you can move in easily</li>
+              <li>Trail shoes / grippy hiking shoes</li>
+              <li>Small backpack</li>
+              <li>Water</li>
+              <li>Hair tie if needed</li>
+              <li>Thin gloves only if you prefer your own and provider does not supply them</li>
+            </ul>
+            <div class="note">The harness / helmet / technical gear may be supplied or rented, so this list focuses on what you personally need to wear and carry.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Toiletries & Health</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Toiletries</h3>
+            <ul class="checklist">
+              <li>Toothbrush and toothpaste</li>
+              <li>Skincare basics</li>
+              <li>Deodorant</li>
+              <li>Hairbrush / comb</li>
+              <li>Hair ties / clips</li>
+              <li>Makeup if wanted</li>
+              <li>Makeup remover / cleansing balm</li>
+              <li>Moisturizer good for dry mountain air</li>
+              <li>Minimal hair tools you will actually use</li>
+              <li>Razor</li>
+              <li>Feminine hygiene products</li>
+              <li>Body lotion</li>
+              <li>Travel-size laundry soap or sink packets</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Health Kit</h3>
+            <ul class="checklist">
+              <li>Prescription medications</li>
+              <li>Ibuprofen / acetaminophen</li>
+              <li>Band-aids</li>
+              <li>Blister care</li>
+              <li>Motion sickness meds if useful</li>
+              <li>Allergy meds</li>
+              <li>Electrolyte packets</li>
+              <li>Any altitude-sensitive comfort items you like</li>
+            </ul>
+          </div>
+          <div class="card warm">
+            <h3>Especially Useful On This Trip</h3>
+            <ul class="checklist">
+              <li>Hand sanitizer</li>
+              <li>Mini sunscreen for daypack</li>
+              <li>Pain relief patches / muscle balm</li>
+              <li>Reusable tissues or travel tissues</li>
+              <li>Mini hairbrush or comb for windy gondola / hike days</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Bags & Organization</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>Main Bags</h3>
+            <ul class="checklist">
+              <li>Main suitcase or travel backpack</li>
+              <li>Daypack for hikes and train days</li>
+              <li>Crossbody / smaller bag for towns and dinners</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Smart Organizers</h3>
+            <ul class="checklist">
+              <li>Packing cubes</li>
+              <li>Shoe bag</li>
+              <li>Laundry bag</li>
+              <li>Small pouch for cords / adapters</li>
+              <li>Zip bag for receipts / paper tickets</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Good To Keep In Your Daypack</h3>
+            <ul class="checklist">
+              <li>Water bottle</li>
+              <li>Portable charger</li>
+              <li>Snacks</li>
+              <li>Light jacket</li>
+              <li>Sunglasses</li>
+              <li>Tissues</li>
+              <li>Ticket screenshots and reservation details</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Trip-Specific Nice-To-Haves</h2>
+        <div class="grid">
+          <div class="card">
+            <h3>For Scenic Stops</h3>
+            <ul class="checklist">
+              <li>Phone tripod or mini tripod</li>
+              <li>Power bank for photo-heavy days</li>
+              <li>Lens cloth</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>For Long Train Days</h3>
+            <ul class="checklist">
+              <li>Neck pillow optional</li>
+              <li>Downloaded shows / music</li>
+              <li>Snack stash</li>
+              <li>Compression socks optional</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>For Spa / Hotel Time</h3>
+            <ul class="checklist">
+              <li>Swimsuit bag</li>
+              <li>Flip-flops or slides</li>
+              <li>Book or Kindle</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Small Extras That Often Matter</h3>
+            <ul class="checklist">
+              <li>Simple everyday jewelry</li>
+              <li>One nicer evening bag if you want it</li>
+              <li>Claw clip / extra hair ties</li>
+              <li>Tinted SPF or quick makeup staples for travel mornings</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section footer">
+        <h2>Best Packing Mindset</h2>
+        <p>Pack for repeat-wearing, layering, and mobility. The highest-value items on this trip are good shoes, a reliable rain layer, a warm layer for altitude, and a daypack that makes trains and mountain days easy. If an item only works with one outfit or one stop, it probably does not deserve suitcase space.</p>
+      </section>
+    </section>
+  </main>
+</body>
+</html>
