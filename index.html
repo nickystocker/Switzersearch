@@ -255,6 +255,44 @@
       margin-top: 8px;
       box-shadow: 0 10px 24px rgba(31, 41, 51, 0.08);
     }
+    .compare-wrap {
+      width: 100%;
+      max-width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 10px;
+      border: 1px solid rgba(31,111,120,.12);
+      border-radius: 14px;
+      background: rgba(31,111,120,.03);
+    }
+    .compare-table {
+      width: 100%;
+      min-width: 0;
+      border-collapse: separate;
+      border-spacing: 0;
+      table-layout: fixed;
+      font-size: .95rem;
+    }
+    .compare-table th,
+    .compare-table td {
+      padding: 10px 12px;
+      border-top: 1px solid rgba(31,111,120,.10);
+      vertical-align: top;
+      text-align: left;
+    }
+    .compare-table th {
+      background: rgba(31,111,120,.08);
+      color: var(--ink);
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .compare-table thead th {
+      border-top: none;
+    }
+    .compare-table tbody tr:first-child td {
+      border-top: none;
+    }
     a { color: var(--accent); }
     td, .meta-block, .index-row, .todo-card {
       overflow-wrap: anywhere;
@@ -330,6 +368,46 @@
         padding-bottom: 0;
       }
       .note-row td { padding-top: 14px; padding-bottom: 14px; }
+      .compare-table,
+      .compare-table thead,
+      .compare-table tbody,
+      .compare-table tr,
+      .compare-table th,
+      .compare-table td {
+        display: table;
+        width: auto;
+      }
+      .compare-table {
+        width: 100%;
+        min-width: 640px;
+      }
+      .compare-table thead {
+        display: table-header-group;
+      }
+      .compare-table tbody {
+        display: table-row-group;
+      }
+      .compare-table tr {
+        display: table-row;
+        padding: 0;
+        border-top: none;
+      }
+      .compare-table th,
+      .compare-table td {
+        display: table-cell;
+        padding: 9px 10px;
+        border-top: 1px solid rgba(31,111,120,.10);
+      }
+      .compare-table thead th {
+        border-top: none;
+      }
+      .compare-table tbody tr:first-child td {
+        border-top: none;
+      }
+      .compare-wrap {
+        margin-left: 0;
+        margin-right: 0;
+      }
       .inline-image {
         max-width: 100%;
         border-radius: 10px;
@@ -353,6 +431,14 @@
       }
       body {
         font-size: 15px;
+      }
+      .compare-table {
+        min-width: 560px;
+        font-size: .88rem;
+      }
+      .compare-table th,
+      .compare-table td {
+        padding: 8px 9px;
       }
     }
   </style>
@@ -1031,8 +1117,8 @@
           <tr>
             <td class="time"><strong>9:15 AM</strong></td>
             <td class="details">Grindelwald-First activity options.
-              <div style="overflow-x:auto; margin-top:10px;">
-                <table style="min-width:760px;">
+              <div class="compare-wrap">
+                <table class="compare-table">
                   <thead>
                     <tr>
                       <th>Option</th>
