@@ -255,43 +255,24 @@
       margin-top: 8px;
       box-shadow: 0 10px 24px rgba(31, 41, 51, 0.08);
     }
-    .compare-wrap {
-      width: 100%;
-      max-width: 100%;
-      overflow-x: auto;
-      -webkit-overflow-scrolling: touch;
+    .compare-list {
+      display: grid;
+      gap: 12px;
       margin-top: 10px;
+    }
+    .compare-item {
+      background: rgba(31,111,120,.05);
       border: 1px solid rgba(31,111,120,.12);
       border-radius: 14px;
-      background: rgba(31,111,120,.03);
+      padding: 12px 14px;
     }
-    .compare-table {
-      width: 100%;
-      min-width: 0;
-      border-collapse: separate;
-      border-spacing: 0;
-      table-layout: fixed;
-      font-size: .95rem;
-    }
-    .compare-table th,
-    .compare-table td {
-      padding: 10px 12px;
-      border-top: 1px solid rgba(31,111,120,.10);
-      vertical-align: top;
-      text-align: left;
-    }
-    .compare-table th {
-      background: rgba(31,111,120,.08);
+    .compare-item strong {
       color: var(--ink);
-      font-size: .8rem;
-      text-transform: uppercase;
-      letter-spacing: .04em;
     }
-    .compare-table thead th {
-      border-top: none;
-    }
-    .compare-table tbody tr:first-child td {
-      border-top: none;
+    .compare-meta {
+      margin-top: 6px;
+      color: var(--muted);
+      font-size: .95rem;
     }
     a { color: var(--accent); }
     td, .meta-block, .index-row, .todo-card {
@@ -368,46 +349,6 @@
         padding-bottom: 0;
       }
       .note-row td { padding-top: 14px; padding-bottom: 14px; }
-      .compare-table,
-      .compare-table thead,
-      .compare-table tbody,
-      .compare-table tr,
-      .compare-table th,
-      .compare-table td {
-        display: table;
-        width: auto;
-      }
-      .compare-table {
-        width: 100%;
-        min-width: 640px;
-      }
-      .compare-table thead {
-        display: table-header-group;
-      }
-      .compare-table tbody {
-        display: table-row-group;
-      }
-      .compare-table tr {
-        display: table-row;
-        padding: 0;
-        border-top: none;
-      }
-      .compare-table th,
-      .compare-table td {
-        display: table-cell;
-        padding: 9px 10px;
-        border-top: 1px solid rgba(31,111,120,.10);
-      }
-      .compare-table thead th {
-        border-top: none;
-      }
-      .compare-table tbody tr:first-child td {
-        border-top: none;
-      }
-      .compare-wrap {
-        margin-left: 0;
-        margin-right: 0;
-      }
       .inline-image {
         max-width: 100%;
         border-radius: 10px;
@@ -432,13 +373,11 @@
       body {
         font-size: 15px;
       }
-      .compare-table {
-        min-width: 560px;
-        font-size: .88rem;
+      .compare-item {
+        padding: 11px 12px;
       }
-      .compare-table th,
-      .compare-table td {
-        padding: 8px 9px;
+      .compare-meta {
+        font-size: .9rem;
       }
     }
   </style>
@@ -1117,69 +1056,35 @@
           <tr>
             <td class="time"><strong>9:15 AM</strong></td>
             <td class="details">Grindelwald-First activity options.
-              <div class="compare-wrap">
-                <table class="compare-table">
-                  <thead>
-                    <tr>
-                      <th>Option</th>
-                      <th>Cost</th>
-                      <th>Pros</th>
-                      <th>Cons</th>
-                      <th>Wait / Popularity</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>First Cliff Walk / First View</strong></td>
-                      <td><strong>Included</strong> with gondola</td>
-                      <td>Big scenic payoff, very easy, no extra cost</td>
-                      <td>Exposed if you dislike heights, can feel crowded for photos</td>
-                      <td>Very popular, but usually more of a photo crowd than a true line</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Bachalpsee hike</strong></td>
-                      <td>No extra fee beyond gondola</td>
-                      <td>One of the most scenic / classic First experiences</td>
-                      <td>Takes the biggest chunk of time, harder to combine with lots of rides</td>
-                      <td>Extremely popular overall, but it is a trail rather than a queued activity</td>
-                    </tr>
-                    <tr>
-                      <td><strong>First Flyer</strong></td>
-                      <td><strong>CHF 35</strong> adult</td>
-                      <td>Fastest / biggest adrenaline hit, iconic First thrill</td>
-                      <td>Over quickly, weather-sensitive</td>
-                      <td>One of the most popular options; often <strong>30-90+ min</strong> in good weather later in the morning</td>
-                    </tr>
-                    <tr>
-                      <td><strong>First Glider</strong></td>
-                      <td><strong>CHF 35</strong> adult</td>
-                      <td>More unusual than Flyer, scenic and memorable</td>
-                      <td>Slower throughput, over quickly, stricter height / age minimums</td>
-                      <td>Also very popular; often <strong>30-90+ min</strong> in good weather</td>
-                    </tr>
-                    <tr>
-                      <td><strong>First Mountain Cart</strong></td>
-                      <td><strong>CHF 25</strong> adult</td>
-                      <td>Fun downhill ride, longer experience than the zip-style rides</td>
-                      <td>Weather dependent, not ideal if you dislike steep descents</td>
-                      <td>Popular, but usually lighter than Flyer / Glider; often <strong>15-45 min</strong></td>
-                    </tr>
-                    <tr>
-                      <td><strong>First Trottibike</strong></td>
-                      <td><strong>CHF 25</strong> adult</td>
-                      <td>Longest downhill activity feel, fun and flexible</td>
-                      <td>Less adrenaline than Flyer / Glider, can be tiring after a big morning</td>
-                      <td>Popular, but usually more manageable than Flyer / Glider; often <strong>15-45 min</strong></td>
-                    </tr>
-                    <tr>
-                      <td><strong>Adventure Package</strong></td>
-                      <td>From <strong>CHF 60</strong></td>
-                      <td>Best value if doing multiple paid activities</td>
-                      <td>Not worth it if you only do one paid add-on</td>
-                      <td>Worth checking day-of at the valley station if you want flexibility</td>
-                    </tr>
-                  </tbody>
-                </table>
+              <div class="compare-list">
+                <div class="compare-item">
+                  <strong>First Cliff Walk / First View</strong> - <strong>Included</strong> with gondola
+                  <div class="compare-meta"><strong>Pros:</strong> big scenic payoff, very easy, no extra cost. <strong>Cons:</strong> exposed if you dislike heights, can feel crowded for photos. <strong>Wait / popularity:</strong> very popular, but usually more of a photo crowd than a true line.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>Bachalpsee hike</strong> - no extra fee beyond gondola
+                  <div class="compare-meta"><strong>Pros:</strong> one of the most scenic / classic First experiences. <strong>Cons:</strong> takes the biggest chunk of time, harder to combine with lots of rides. <strong>Wait / popularity:</strong> extremely popular overall, but it is a trail rather than a queued activity.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>First Flyer</strong> - <strong>CHF 35</strong> adult
+                  <div class="compare-meta"><strong>Pros:</strong> fastest / biggest adrenaline hit, iconic First thrill. <strong>Cons:</strong> over quickly, weather-sensitive. <strong>Wait / popularity:</strong> one of the most popular options; often <strong>30-90+ min</strong> in good weather later in the morning.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>First Glider</strong> - <strong>CHF 35</strong> adult
+                  <div class="compare-meta"><strong>Pros:</strong> more unusual than Flyer, scenic and memorable. <strong>Cons:</strong> slower throughput, over quickly, stricter height / age minimums. <strong>Wait / popularity:</strong> also very popular; often <strong>30-90+ min</strong> in good weather.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>First Mountain Cart</strong> - <strong>CHF 25</strong> adult
+                  <div class="compare-meta"><strong>Pros:</strong> fun downhill ride, longer experience than the zip-style rides. <strong>Cons:</strong> weather dependent, not ideal if you dislike steep descents. <strong>Wait / popularity:</strong> popular, but usually lighter than Flyer / Glider; often <strong>15-45 min</strong>.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>First Trottibike</strong> - <strong>CHF 25</strong> adult
+                  <div class="compare-meta"><strong>Pros:</strong> longest downhill activity feel, fun and flexible. <strong>Cons:</strong> less adrenaline than Flyer / Glider, can be tiring after a big morning. <strong>Wait / popularity:</strong> popular, but usually more manageable than Flyer / Glider; often <strong>15-45 min</strong>.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>Adventure Package</strong> - from <strong>CHF 60</strong>
+                  <div class="compare-meta"><strong>Pros:</strong> best value if doing multiple paid activities. <strong>Cons:</strong> not worth it if you only do one paid add-on. <strong>Wait / popularity:</strong> worth checking day-of at the valley station if you want flexibility.</div>
+                </div>
               </div>
               <br><strong>Best overall strategy:</strong> if you want the most efficient version of the day, do <strong>Cliff Walk + one paid thrill activity + lunch + Trottibike</strong>. If lines are already long by late morning, skip extra rides and lean into the scenic version instead.</td>
             <td class="extra"></td>
