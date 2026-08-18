@@ -274,6 +274,43 @@
       color: var(--muted);
       font-size: .95rem;
     }
+    .mini-schedule {
+      display: grid;
+      gap: 8px;
+      margin: 10px 0 12px;
+    }
+    .mini-schedule-title {
+      display: block;
+      color: var(--ink);
+      margin-top: 10px;
+      margin-bottom: 2px;
+    }
+    .schedule-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      gap: 8px;
+      align-items: center;
+      background: rgba(255,255,255,.72);
+      border: 1px solid rgba(31,111,120,.10);
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+    .schedule-time {
+      color: var(--ink);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .schedule-arrow {
+      color: var(--accent);
+      font-weight: 900;
+    }
+    .schedule-note {
+      display: block;
+      color: var(--muted);
+      font-size: .86rem;
+      margin-top: 2px;
+      font-weight: 600;
+    }
     a { color: var(--accent); }
     td, .meta-block, .index-row, .todo-card {
       overflow-wrap: anywhere;
@@ -352,6 +389,14 @@
       .inline-image {
         max-width: 100%;
         border-radius: 10px;
+      }
+      .schedule-row {
+        grid-template-columns: minmax(0, 1fr) 18px minmax(0, 1fr);
+        gap: 6px;
+        padding: 8px;
+      }
+      .schedule-time {
+        white-space: normal;
       }
     }
     @media (max-width: 520px) {
@@ -999,12 +1044,49 @@
           </tr>
           <tr>
             <td class="time"><strong>Afternoon</strong></td>
-            <td class="details">Keep the afternoon flexible: slow Interlaken / lakefront wander, cafe time, return to Wengen for hotel downtime, or use this as a weather-buffer window.</td>
+            <td class="details"><strong>Option 1 - Lake Brienz boat to Giessbach Falls</strong>.
+              <div class="compare-list">
+                <div class="compare-item">
+                  <strong>Best scenic plan after paragliding</strong>
+                  <div class="compare-meta"><strong>Route:</strong> walk from <strong>Interlaken Ost</strong> to the boat dock, take the Lake Brienz boat to <strong>Giessbach See</strong>, ride / walk up toward <strong>Grandhotel Giessbach</strong>, see <strong>Giessbach Falls</strong>, then boat back to Interlaken Ost.
+                    <strong class="mini-schedule-title">Outbound: Interlaken Ost → Giessbach See</strong>
+                    <div class="mini-schedule">
+                      <div class="schedule-row"><span><span class="schedule-time">11:07 AM</span><span class="schedule-note">Best if paragliding ends smoothly</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~12:09 PM</span><span class="schedule-note">Giessbach See</span></span></div>
+                      <div class="schedule-row"><span><span class="schedule-time">12:07 PM</span><span class="schedule-note">Most realistic target</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~1:09 PM</span><span class="schedule-note">Giessbach See</span></span></div>
+                      <div class="schedule-row"><span><span class="schedule-time">2:07 PM</span><span class="schedule-note">Late backup</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~3:09 PM</span><span class="schedule-note">Giessbach See</span></span></div>
+                      <div class="schedule-row"><span><span class="schedule-time">4:07 PM</span><span class="schedule-note">Only if you want a late lake cruise</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~5:09 PM</span><span class="schedule-note">Giessbach See</span></span></div>
+                    </div>
+                    <strong class="mini-schedule-title">Return: Giessbach See → Interlaken Ost</strong>
+                    <div class="mini-schedule">
+                      <div class="schedule-row"><span><span class="schedule-time">12:51 PM</span><span class="schedule-note">Very short falls stop</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~2:23 PM</span><span class="schedule-note">Interlaken Ost</span></span></div>
+                      <div class="schedule-row"><span><span class="schedule-time">1:51 PM</span><span class="schedule-note">Good return after 11:07 boat</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~3:23 PM</span><span class="schedule-note">Interlaken Ost</span></span></div>
+                      <div class="schedule-row"><span><span class="schedule-time">3:51 PM</span><span class="schedule-note">Best relaxed return</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~5:23 PM</span><span class="schedule-note">Interlaken Ost</span></span></div>
+                      <div class="schedule-row"><span><span class="schedule-time">5:51 PM</span><span class="schedule-note">Latest practical return</span></span><span class="schedule-arrow">→</span><span><span class="schedule-time">~7:23 PM</span><span class="schedule-note">Interlaken Ost</span></span></div>
+                    </div>
+                    <strong>Best fit:</strong> aim for the <strong>11:07 AM</strong> boat if paragliding ends early and smoothly; otherwise use the <strong>12:07 PM</strong> boat and keep lunch simple / portable.<br><strong>Ticketing:</strong> buy in the <strong>SBB app</strong> or at the BLS boat dock; Swiss Half Fare Card should discount eligible boat travel.<br><strong>Important:</strong> verify the exact boat times in SBB / BLS the day before, because this plan depends on the boat schedule.</div>
+                </div>
+              </div>
+            </td>
             <td class="extra"></td>
           </tr>
           <tr>
-            <td class="time"><strong>Evening</strong></td>
-            <td class="details">Leave evening open for now. Easy dinner in <strong>Wengen</strong> or <strong>Interlaken</strong> depending on energy.<br><strong>Regional dishes to look for:</strong> fondue, rosti, alpine cheese dishes, sausages, and meringues with cream.</td>
+            <td class="time"><strong>Option 2</strong></td>
+            <td class="details"><strong>Nearby town wander / backup scenic afternoon</strong>.
+              <div class="compare-list">
+                <div class="compare-item">
+                  <strong>Grindelwald</strong>
+                  <div class="compare-meta"><strong>Best if:</strong> you want more time there in case the 9/03 Grindelwald-First morning feels too rushed. Easy train from <strong>Interlaken Ost</strong>, good for village views, cafes, gear shops, and a slower mountain-town wander.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>Brienz</strong>
+                  <div class="compare-meta"><strong>Best if:</strong> you want a lakeside village that is not otherwise a dedicated stop. Known for woodcarving, lakefront walking, and a gentler pace than Interlaken.</div>
+                </div>
+                <div class="compare-item">
+                  <strong>Spiez</strong>
+                  <div class="compare-meta"><strong>Best if:</strong> you want an easy, pretty Lake Thun town with vineyards, castle views, and a relaxed waterfront without committing to a full excursion.</div>
+                </div>
+              </div>
+              <br><strong>Evening:</strong> leave dinner open for now. Easy dinner in <strong>Wengen</strong> or wherever you end the afternoon.<br><strong>Regional dishes to look for:</strong> fondue, rosti, alpine cheese dishes, sausages, and meringues with cream.</td>
             <td class="extra"></td>
           </tr>
         </tbody></table>
