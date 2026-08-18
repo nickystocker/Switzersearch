@@ -141,6 +141,44 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
 
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-top: 14px;
+      border: 1px solid rgba(31,111,120,.12);
+      border-radius: 18px;
+      background: rgba(31,111,120,.03);
+    }
+
+    table.plan-table {
+      width: 100%;
+      min-width: 720px;
+      border-collapse: collapse;
+      font-size: .96rem;
+    }
+
+    .plan-table th,
+    .plan-table td {
+      padding: 12px 14px;
+      vertical-align: top;
+      text-align: left;
+      border-top: 1px solid var(--line);
+    }
+
+    .plan-table thead th {
+      border-top: none;
+      background: rgba(31,111,120,.08);
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--muted);
+    }
+
+    .plan-table tbody tr:first-child td {
+      border-top: none;
+    }
+
     .card {
       background: rgba(31,111,120,.05);
       border: 1px solid rgba(31,111,120,.12);
@@ -217,6 +255,14 @@
     @media (max-width: 860px) {
       .page { width: min(100%, calc(100% - 20px)); }
       .hero, .intro, .section, .summary-card, .footer { padding-left: 18px; padding-right: 18px; }
+      table.plan-table {
+        min-width: 620px;
+        font-size: .92rem;
+      }
+      .plan-table th,
+      .plan-table td {
+        padding: 10px 12px;
+      }
     }
   </style>
 </head>
@@ -230,25 +276,246 @@
     <section class="summary">
       <div class="summary-card">
         <span class="label">Trip Style</span>
-        <strong>Mountains + towns + transit</strong>
+        <strong>Mountains + towns + train days + a few polished dinners</strong>
       </div>
       <div class="summary-card">
         <span class="label">Big Conditions</span>
-        <strong>Warm valleys, cool alpine mornings, shifting weather</strong>
+        <strong>Warm lake days, cool alpine mornings, fast weather swings</strong>
       </div>
       <div class="summary-card">
         <span class="label">Packing Strategy</span>
-        <strong>Layers, repeatable outfits, comfortable shoes</strong>
+        <strong>Repeat cute outfits, keep activewear fresh, layer smart</strong>
       </div>
       <div class="summary-card">
         <span class="label">Special Activities</span>
-        <strong>Hikes, cable cars, spa, paragliding, via ferrata</strong>
+        <strong>9 active-bottom days, spa day, paragliding, via ferrata, cable cars</strong>
       </div>
     </section>
 
     <section class="intro section">
       <h2>How To Pack For This Trip</h2>
-      <p>This itinerary is not a heavy city trip and not a full technical hiking trip either. The sweet spot is a compact wardrobe that works for travel days, nice dinners, mountain villages, photos, and repeated alpine layering. Prioritize comfort, weather flexibility, and easy day-bag access over packing lots of single-use outfits, but still leave room for a few pieces that feel put-together in Sirmione, Lucerne, and Zurich.</p>
+      <p>Your actual itinerary mixes two Dolomites hiking days, three Zermatt mountain days, paragliding, Oeschinensee, Grindelwald-First, a via ferrata day, Stoos Ridge, scenic train transfers, spa time in Sirmione, and nicer town / dinner windows in Sirmione, Lucerne, and Zurich. Rewearing dresses, skirts, pants, sweaters, and normal travel outfits makes total sense here. The area where this itinerary really needs enough quantity is sweaty hiking / athletic clothing, because you have multiple true mountain days packed close together.</p>
+    </section>
+
+    <section class="section">
+      <h2>Day-By-Day Clothing Plan</h2>
+      <p>This pulls directly from your current itinerary. Normal outfits can repeat; the active / hiking days below are the ones that really drive your athletic packing counts.</p>
+      <div class="table-wrap">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Day</th>
+              <th>What To Wear</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>8/23</strong></td>
+              <td>Arrival + drive to Dolomites</td>
+              <td>Comfortable travel outfit, light layer for the flight / late drive, walking sneakers.</td>
+            </tr>
+            <tr>
+              <td><strong>8/24</strong></td>
+              <td>Seceda + Alpe di Siusi</td>
+              <td><strong>Fresh hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, light shell, optional fleece.</td>
+            </tr>
+            <tr>
+              <td><strong>8/25</strong></td>
+              <td>Lago di Braies + Cadini / Tre Cime</td>
+              <td><strong>Fresh hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, light shell, warmer layer for the early start.</td>
+            </tr>
+            <tr>
+              <td><strong>8/26</strong></td>
+              <td>Travel day to Sirmione</td>
+              <td>Cute comfortable travel outfit, rewearable skirt / pants / dress, walking shoes, light cardigan.</td>
+            </tr>
+            <tr>
+              <td><strong>8/27</strong></td>
+              <td>Sirmione spa day</td>
+              <td>Easy morning outfit, <strong>swimsuit</strong>, cover-up / change clothes, slides, then dinner outfit.</td>
+            </tr>
+            <tr>
+              <td><strong>8/28</strong></td>
+              <td>Sirmione to Zermatt train day</td>
+              <td>Comfortable train outfit, light sweater, clean socks, walking sneakers.</td>
+            </tr>
+            <tr>
+              <td><strong>8/29</strong></td>
+              <td>Gornergrat hiking day</td>
+              <td><strong>Fresh hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, shell, light warm layer.</td>
+            </tr>
+            <tr>
+              <td><strong>8/30</strong></td>
+              <td>Rothorn / 5 Lakes Trail</td>
+              <td><strong>Fresh hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, light shell.</td>
+            </tr>
+            <tr>
+              <td><strong>8/31</strong></td>
+              <td>Glacier Paradise + Glacier Trail</td>
+              <td><strong>Fresh hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, shell, warmer alpine layer.</td>
+            </tr>
+            <tr>
+              <td><strong>9/01</strong></td>
+              <td>Travel to Wengen + Lauterbrunnen</td>
+              <td>Comfortable travel / walking outfit, sneakers, light sweater.</td>
+            </tr>
+            <tr>
+              <td><strong>9/02</strong></td>
+              <td>Paragliding + Oeschinensee</td>
+              <td><strong>Fresh athletic outfit:</strong> athletic top, athletic bottom, sports bra, sneakers or hiking shoes, light jacket.</td>
+            </tr>
+            <tr>
+              <td><strong>9/03</strong></td>
+              <td>Grindelwald-First + Trottibike</td>
+              <td><strong>Fresh athletic / hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, light layer.</td>
+            </tr>
+            <tr>
+              <td><strong>9/04</strong></td>
+              <td>Mürren via ferrata</td>
+              <td><strong>Fresh active outfit:</strong> athletic top, athletic bottom, sports bra, hiking / grippy shoes, light layer.</td>
+            </tr>
+            <tr>
+              <td><strong>9/05</strong></td>
+              <td>Wengen to Lucerne + Old Town / optional Bürgenstock</td>
+              <td>Cute town / travel outfit, rewearable dress / skirt / pants, walking shoes, light cardigan.</td>
+            </tr>
+            <tr>
+              <td><strong>9/06</strong></td>
+              <td>Stoos Ridge hike</td>
+              <td><strong>Fresh hiking outfit:</strong> athletic top, athletic bottom, sports bra, hiking shoes, shell.</td>
+            </tr>
+            <tr>
+              <td><strong>9/07</strong></td>
+              <td>Lucerne to Zurich</td>
+              <td>Cute city outfit, comfortable walking shoes, light layer.</td>
+            </tr>
+            <tr>
+              <td><strong>9/08</strong></td>
+              <td>Flight home</td>
+              <td>Comfortable airport outfit, soft layers, sneakers.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Aggregated Clothing Totals</h2>
+      <p>This is the roll-up from the day-by-day plan above, using your real itinerary and your preference not to re-wear sweaty athletic clothes.</p>
+      <div class="table-wrap">
+        <table class="plan-table">
+          <thead>
+            <tr>
+              <th>Category</th>
+              <th>Recommended Total</th>
+              <th>Why</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Athletic / hiking tops</strong></td>
+              <td><strong>8-9</strong></td>
+              <td>You have 9 true active days and do not want to re-wear sweaty athletic pieces.</td>
+            </tr>
+            <tr>
+              <td><strong>Athletic / hiking bottoms</strong></td>
+              <td><strong>8-9</strong></td>
+              <td>Same logic as above; this is the real itinerary-based number for a no-repeat version.</td>
+            </tr>
+            <tr>
+              <td><strong>Sports bras</strong></td>
+              <td><strong>8-9</strong></td>
+              <td>One for each active day if you want to keep activewear fully fresh.</td>
+            </tr>
+            <tr>
+              <td><strong>Hiking socks</strong></td>
+              <td><strong>9-10 pairs</strong></td>
+              <td>One pair per active day plus a backup pair.</td>
+            </tr>
+            <tr>
+              <td><strong>Everyday / town tops</strong></td>
+              <td><strong>4-6</strong></td>
+              <td>These can repeat across travel, Sirmione, Lucerne, Zurich, and dinners.</td>
+            </tr>
+            <tr>
+              <td><strong>Town bottoms</strong></td>
+              <td><strong>2-3</strong></td>
+              <td>You are okay re-wearing skirts / pants / easy town pieces.</td>
+            </tr>
+            <tr>
+              <td><strong>Dresses / skirts / polished outfits</strong></td>
+              <td><strong>2-4</strong></td>
+              <td>Useful for Sirmione, Lucerne, Zurich, and dinners when you want a more put-together look.</td>
+            </tr>
+            <tr>
+              <td><strong>Light sweaters / long sleeves</strong></td>
+              <td><strong>2-3</strong></td>
+              <td>Needed for trains, evenings, and layering.</td>
+            </tr>
+            <tr>
+              <td><strong>Rain shell</strong></td>
+              <td><strong>1</strong></td>
+              <td>High-value item for mountain weather across the Dolomites, Zermatt, Bernese Oberland, and Stoos.</td>
+            </tr>
+            <tr>
+              <td><strong>Warm midlayer / fleece</strong></td>
+              <td><strong>1-2</strong></td>
+              <td>Useful on colder alpine mornings and lift-heavy days.</td>
+            </tr>
+            <tr>
+              <td><strong>Packable puffer / insulated layer</strong></td>
+              <td><strong>1</strong></td>
+              <td>Helpful for the coldest altitude windows, especially Zermatt.</td>
+            </tr>
+            <tr>
+              <td><strong>Swimsuit</strong></td>
+              <td><strong>1</strong></td>
+              <td>For the 8/27 Aquaria spa day.</td>
+            </tr>
+            <tr>
+              <td><strong>Spa cover-up / easy change outfit</strong></td>
+              <td><strong>1</strong></td>
+              <td>For the same spa / thermal day.</td>
+            </tr>
+            <tr>
+              <td><strong>Pajamas / lounge set</strong></td>
+              <td><strong>1-2</strong></td>
+              <td>For hotel and spa downtime.</td>
+            </tr>
+            <tr>
+              <td><strong>Everyday bras</strong></td>
+              <td><strong>2-3</strong></td>
+              <td>Separate from sports bras for town / dinner / travel looks.</td>
+            </tr>
+            <tr>
+              <td><strong>Underwear</strong></td>
+              <td><strong>14-16 pairs</strong></td>
+              <td>Supports active days plus travel / town days without stress.</td>
+            </tr>
+            <tr>
+              <td><strong>Everyday socks</strong></td>
+              <td><strong>4-6 pairs</strong></td>
+              <td>For town, train, and easier walking days.</td>
+            </tr>
+            <tr>
+              <td><strong>Hiking shoes</strong></td>
+              <td><strong>1 pair</strong></td>
+              <td>Needed for all real mountain days.</td>
+            </tr>
+            <tr>
+              <td><strong>Town / travel sneakers</strong></td>
+              <td><strong>1 pair</strong></td>
+              <td>Cleaner shoe for trains, towns, and non-hike days.</td>
+            </tr>
+            <tr>
+              <td><strong>Slides / sandals</strong></td>
+              <td><strong>1 pair</strong></td>
+              <td>For spa, hotel, and easy evenings.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </section>
 
     <section class="sections">
@@ -297,24 +564,25 @@
 
       <section class="section">
         <h2>Clothing</h2>
-        <p>These quantities assume a laundry-friendly, rewear-oriented plan rather than packing a brand-new outfit for every day.</p>
+        <p>These quantities are aligned to your current itinerary. They assume rewearing normal outfits is fine, but that you do not want to re-wear sweaty athletic clothes from mountain / activity days.</p>
         <div class="grid">
           <div class="card">
             <h3>Everyday Clothes</h3>
             <ul class="checklist">
-              <li>7-9 tops total</li>
+              <li>6-8 everyday tops total</li>
               <li>2-3 lightweight sweaters or long sleeves</li>
-              <li>2 casual bottoms for travel / town days</li>
+              <li>2 casual bottoms for travel / town days that you are happy to rewear</li>
               <li>1 pair of jeans or easy pants for cooler evenings</li>
-              <li>1-2 nicer dinner outfits</li>
-              <li>1-2 dresses / skirts / elevated outfits if that feels more like you</li>
+              <li>2-3 dresses / skirts / prettier outfits if that feels more like you</li>
+              <li>1-2 nicer dinner outfits, but these can overlap with the dresses / skirts above</li>
               <li>1 easy hotel / lounge outfit</li>
-              <li>Undergarments for 8-10 days</li>
+              <li>Undergarments for 12-14 days</li>
               <li>Everyday bras</li>
-              <li>1-2 sports bras</li>
-              <li>8-10 pairs of socks</li>
+              <li>3-4 sports bras so you are not re-wearing sweaty ones</li>
+              <li>12-14 pairs of socks</li>
               <li>Pajamas</li>
             </ul>
+            <div class="note">Your town / dinner rewear pieces need to cover: Sirmione, Verona lunch stop, Zermatt dinners, Wengen dinners, Lucerne, and Zurich.</div>
           </div>
           <div class="card">
             <h3>Mountain Layers</h3>
@@ -322,22 +590,26 @@
               <li>Light waterproof shell</li>
               <li>Midlayer fleece or performance zip-up</li>
               <li>Packable insulated jacket or warm puffer</li>
-              <li>2-3 moisture-wicking active tops</li>
-              <li>1-2 pairs of hiking leggings / pants / shorts</li>
+              <li>5-6 moisture-wicking active tops</li>
+              <li>6-7 hiking / athletic bottoms if you want a realistic no-repeat version</li>
+              <li>8-9 hiking / athletic bottoms only if you want a strict zero-repeat version for every active day</li>
+              <li>1 extra lightweight athletic layer for cooler early starts</li>
               <li>Light gloves if you run cold</li>
               <li>Buff or light neck gaiter optional</li>
             </ul>
+            <div class="note">Cross-referenced to your itinerary, the clear athletic-bottom days are 8/24, 8/25, 8/29, 8/30, 8/31, 9/02, 9/03, 9/04, and 9/06.</div>
           </div>
           <div class="card">
             <h3>Warm-Weather / Lake Items</h3>
             <ul class="checklist">
-              <li>1-2 lighter outfits for Sirmione / Zurich / Lucerne</li>
+              <li>2 lighter outfits for Sirmione / Zurich / Lucerne</li>
               <li>Swimsuit for Aquaria Thermal Spa</li>
               <li>Cover-up or easy change layer for spa</li>
               <li>Light cardigan or layer for lakefront dinners</li>
               <li>Sun hat or baseball cap</li>
               <li>Sunglasses</li>
             </ul>
+            <div class="note">This category is mostly for Sirmione spa / lake time, the slower Zurich day, and easier Lucerne wandering.</div>
           </div>
         </div>
       </section>
@@ -352,7 +624,7 @@
               <li>1 comfortable walking sneaker for towns and travel days</li>
               <li>1 sandal / slide / spa shoe</li>
             </ul>
-            <div class="note">If your hiking shoe is comfortable enough for general wear, you can get away with just one sneaker-style backup plus spa sandals.</div>
+            <div class="note">This setup covers Tre Cime, Zermatt trails, Oeschinensee, Grindelwald-First / Trottibike, Mürren via ferrata day, and Stoos Ridge while still giving you a cleaner town shoe.</div>
           </div>
           <div class="card warm">
             <h3>Do Not Forget</h3>
@@ -380,21 +652,23 @@
               <li>Tissues / wipes</li>
               <li>Light rain layer</li>
             </ul>
+            <div class="note">This applies most directly to 8/24, 8/25, 8/29, 8/30, 8/31, 9/02, 9/03, 9/04, and 9/06.</div>
           </div>
           <div class="card">
             <h3>Paragliding</h3>
             <ul class="checklist">
-              <li>Athletic outfit</li>
+              <li>Fresh athletic outfit</li>
               <li>Sneakers with secure fit</li>
               <li>Sunglasses</li>
               <li>Phone with strap or secure pocket</li>
               <li>Light layer for morning conditions</li>
             </ul>
+            <div class="note">Your itinerary specifically says to bring sunglasses, phone, and wallet, and that larger bags can be left at the base.</div>
           </div>
           <div class="card">
             <h3>Mürren Via Ferrata</h3>
             <ul class="checklist">
-              <li>Active outfit you can move in easily</li>
+              <li>Fresh active outfit you can move in easily</li>
               <li>Trail shoes / grippy hiking shoes</li>
               <li>Small backpack</li>
               <li>Water</li>
@@ -402,6 +676,28 @@
               <li>Thin gloves only if you prefer your own and provider does not supply them</li>
             </ul>
             <div class="note">The harness / helmet / technical gear may be supplied or rented, so this list focuses on what you personally need to wear and carry.</div>
+          </div>
+          <div class="card">
+            <h3>Spa / Lake Day</h3>
+            <ul class="checklist">
+              <li>Swimsuit</li>
+              <li>Dry underwear for after the spa</li>
+              <li>Easy change clothes</li>
+              <li>Slides</li>
+              <li>Waterproof / wet bag for swimsuit</li>
+            </ul>
+            <div class="note">This is specifically for the 8/27 Aquaria spa day in Sirmione.</div>
+          </div>
+          <div class="card">
+            <h3>Grindelwald-First Day</h3>
+            <ul class="checklist">
+              <li>Fresh athletic outfit</li>
+              <li>Light jacket for altitude / wind</li>
+              <li>Hiking shoes with grip</li>
+              <li>Sunglasses</li>
+              <li>Small backpack</li>
+            </ul>
+            <div class="note">You have enough activity stacked on 9/03 that this should be treated like a true active day, not a casual sightseeing day.</div>
           </div>
         </div>
       </section>
@@ -463,6 +759,7 @@
               <li>Daypack for hikes and train days</li>
               <li>Crossbody / smaller bag for towns and dinners</li>
             </ul>
+            <div class="note">Your daypack matters a lot on this trip because you have multiple train-transfer days plus cable cars and all-day mountain outings.</div>
           </div>
           <div class="card">
             <h3>Smart Organizers</h3>
@@ -485,6 +782,7 @@
               <li>Tissues</li>
               <li>Ticket screenshots and reservation details</li>
             </ul>
+            <div class="note">This is especially important for Tre Cime parking, Lago di Braies parking, train QR codes, and the Oeschinensee / Via Ferrata / Lindt / spa bookings.</div>
           </div>
         </div>
       </section>
@@ -508,6 +806,7 @@
               <li>Snack stash</li>
               <li>Compression socks optional</li>
             </ul>
+            <div class="note">Most relevant for 8/28 Sirmione to Zermatt, 9/01 Zermatt to Wengen, and 9/05 Wengen to Lucerne.</div>
           </div>
           <div class="card">
             <h3>For Spa / Hotel Time</h3>
@@ -516,6 +815,7 @@
               <li>Flip-flops or slides</li>
               <li>Book or Kindle</li>
             </ul>
+            <div class="note">Useful for the Aquaria spa day, Hotel Flaminia loungers, and hotel downtime in Zermatt / Wengen.</div>
           </div>
           <div class="card">
             <h3>Small Extras That Often Matter</h3>
@@ -531,7 +831,7 @@
 
       <section class="section footer">
         <h2>Best Packing Mindset</h2>
-        <p>Pack for repeat-wearing, layering, and mobility. The highest-value items on this trip are good shoes, a reliable rain layer, a warm layer for altitude, and a daypack that makes trains and mountain days easy. If an item only works with one outfit or one stop, it probably does not deserve suitcase space.</p>
+        <p>Pack for repeat-wearing in your normal outfits, but pack enough fresh activewear for the real mountain load in this itinerary. The highest-value items on this trip are good shoes, a reliable rain layer, a warm layer for altitude, enough clean athletic pieces for the back-to-back hiking days, and a daypack that makes trains and mountain logistics easy. If an item only works with one outfit or one stop, it probably does not deserve suitcase space.</p>
       </section>
     </section>
   </main>
