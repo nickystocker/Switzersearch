@@ -1642,6 +1642,10 @@
       return `${Math.round(value)}°F`;
     }
 
+    function weatherDetailsLink(day) {
+      return `https://www.windy.com/${day.latitude}/${day.longitude}?${day.latitude},${day.longitude},10`;
+    }
+
     function formatWeather(day, forecast) {
       const daily = forecast.daily;
       if (!daily || !daily.time || !daily.time.length) {
@@ -1682,7 +1686,7 @@
             <span class="weather-chip-value">${windText}</span>
           </div>
         </div>
-        <span class="weather-source">Open-Meteo forecast for ${day.date}.</span>
+        <span class="weather-source">Open-Meteo forecast for ${day.date}. <a href="${weatherDetailsLink(day)}" target="_blank" rel="noopener">More weather details</a>.</span>
       `;
     }
 
@@ -1694,7 +1698,7 @@
           <span class="weather-temp">Not available yet</span>
         </div>
         <div class="weather-detail">This date is probably outside the live forecast window. Check again closer to ${day.date}.</div>
-        <span class="weather-source">Weather loads from Open-Meteo when the forecast window opens.</span>
+        <span class="weather-source">Weather loads from Open-Meteo when the forecast window opens. <a href="${weatherDetailsLink(day)}" target="_blank" rel="noopener">More weather details</a>.</span>
       `;
     }
 
